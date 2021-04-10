@@ -1,9 +1,9 @@
-import express from 'express';
-const app = express();
+import express, { Application, Request, Response, NextFunction } from 'express';
+const app: Application = express();
 
 app.set('port', process.env.PORT || 5000);
 
-app.get('/', (req, res) => {
+app.get('/', (req: Request, res: Response, next: NextFunction) => {
     res.send('Using the app typescript now')
 })
 
