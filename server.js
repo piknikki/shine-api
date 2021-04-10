@@ -43,11 +43,20 @@ app.get('/api/v1/posts/:pid', (req, res) => {
 // adding a post
 app.post('/api/v1/posts', (req, res) => {
   const pid = Date.now()
-  const { uid, title, content } = req.body;
-  app.locals.posts.push({ uid, title, content })
+  const post = req.body; // post is everything passed in in the request, should include uid
 
+  // error handling if all fields aren't filled in or there isn't a user id passed in
+  for (let requiredParam of ['uid', 'title', 'content']) {
+    if (!post[requiredParam]) {
+      res.status(422)
+        .send({ error: `Please complete all fields.` })
+    }
+  }
+
+  const { uid, title, content } = post
+  app.locals.posts.push({ uid, title, content, pid })
   // send back the response with a status code and the body of the post
-  res.status(201).json({ uid, title, content })
+  res.status(201).json({ uid, title, content, pid })
 })
 
 // spin up the server and show confirmation message of port
