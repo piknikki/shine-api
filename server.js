@@ -7,6 +7,9 @@ const posts = require('./data/posts')
 // set a port for the app
 app.set('port', process.env.PORT || 5000);
 
+// parse the req body to json by default
+app.use(express.json())
+
 // make a name for the app
 app.locals = {
   title: 'SHINE',
@@ -35,6 +38,16 @@ app.get('/api/v1/posts/:pid', (req, res) => {
     return res.sendStatus(404)
   }
   res.status(200).json(post)
+})
+
+// adding a post
+app.post('/api/v1/posts', (req, res) => {
+  const pid = Date.now()
+  const { uid, title, content } = req.body;
+  app.locals.posts.push({ uid, title, content })
+
+  // send back the response with a status code and the body of the post
+  res.status(201).json({ uid, title, content })
 })
 
 // spin up the server and show confirmation message of port
