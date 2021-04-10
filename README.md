@@ -1,7 +1,15 @@
 # SHINE api (backend)
 
 ### To start the server locally:
-cd into the root of the project and run `npm run start`
+## Set Up
+
+Clone down this repo. (Do **NOT** nest it inside your working directory for the front end)
+
+CD into this repo.
+
+Run `npm install`.
+
+Run `npm start` to start the server.
 
 The project will run on your localhost *5000*
 
