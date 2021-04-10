@@ -14,7 +14,7 @@ Run `npm start` to start the server.
 The project will run on your localhost *5000*
 
 
-## Endpoints
+## Endpoints for Heroku deployment
 
 ### GET all posts
 URL: `https://shine-api.herokuapp.com/api/v1/posts`
@@ -44,3 +44,19 @@ Sample response (404):
 URL: `https://shine-api.herokuapp.com/api/v1/posts`
 
 Need to pass in:  `{ uid, title, content, pid }`
+
+## Endpoints for running locally
+
+### GET all posts
+URL: `http://localhost:5000/api/v1/posts`
+
+### GET one post (by pid)
+URL: `http://localhost:5000/api/v1/posts/:pid`
+
+ex: `http://localhost:5000/api/v1/posts/1001`
+
+### POST a new post
+URL: `http://localhost:5000/api/v1/posts`
+
+Need to pass in:  `{ uid, title, content, pid }`
+
