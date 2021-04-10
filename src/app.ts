@@ -27,7 +27,7 @@ app.get('/api/v1/posts', (req: Request, res: Response, next: NextFunction) => {
 
 app.get('/api/v1/posts/:pid', (req: Request, res: Response, next: NextFunction) => {
     const { pid } = req.params;
-    const post = app.locals.posts.find(post => post.pid === Number(pid));
+    const post: object = app.locals.posts.find((post: { pid: number; }) => post.pid === Number(pid));
     console.log(typeof pid);
 
     if (!post) {
