@@ -2,8 +2,8 @@ import express, { Application, Request, Response, NextFunction } from 'express';
 const app: Application = express();
 const cors = require('cors');
 
-const users = require('./data/users');
-const posts = require('./data/posts');
+const users = require('../data/users');
+const posts = require('../data/posts');
 
 app.set('port', process.env.PORT || 5000);
 
