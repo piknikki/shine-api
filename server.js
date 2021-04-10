@@ -57,6 +57,3 @@ app.post('/api/v1/posts', (req, res) => {
 app.listen(app.get('port'), () => {
   console.log(`${app.locals.title} is running on http://localhost:${app.get('port')}.`);
 })
-
-// todo ==> do this in typescript
-
