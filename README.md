@@ -31,3 +31,8 @@ Sample response (404):
 ```js
   { message: 'User with the id of 2 does not exist' }
 ```
+
+### POST a new post
+URL: `https://shine-api.herokuapp.com/api/v1/posts`
+
+Need to pass in:  `{ uid, title, content, pid }`
