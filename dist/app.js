@@ -16,11 +16,6 @@ app.use(cors());
 app.use('/api/v1/posts', posts_1.default);
 // set up root route for users
 app.use('/api/v1/users', users_1.default);
-// todo ==> fix this it's throwing an error:  'TypeError: res.status is not a function'
-// app.use((err: Error, req: Request, res: Response) => {
-//     res.status(500).json({ message: err.message })
-// })
-// spin up the server and show confirmation message of port
 app.listen(app.get('port'), () => {
     console.log(`SHINE is running on http://localhost:${app.get('port')}.`);
 });
