@@ -11,6 +11,10 @@ const posts = require('../data/posts');
 app.set('port', process.env.PORT || 5000);
 app.use(express_1.default.json());
 app.use(cors());
+// do some basic error handling
+app.use((err, req, res, next) => {
+    res.status(500).json({ message: err.message });
+});
 app.locals = {
     title: 'SHINE',
     users,

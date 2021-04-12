@@ -8,7 +8,7 @@ const posts = [
   {
     pid: 1002,
     uid: 42002,
-    title: "I'm here 4 U",
+    title: "U R a Jedi",
     content: "You should be paid fairly, without compromise. I call it 'aggressive negotiations'."
   },
   {
