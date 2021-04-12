@@ -10,7 +10,7 @@ const posts_1 = __importDefault(require("./routes/posts")); // bring in the rout
 app.set('port', process.env.PORT || 5000);
 app.use(express_1.default.json());
 app.use(cors());
-// set up root route
+// set up root route for posts
 app.use('/api/v1/posts', posts_1.default);
 // do some basic error handling
 app.use((err, req, res, next) => {

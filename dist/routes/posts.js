@@ -7,7 +7,7 @@ const router = express_1.Router();
 router.get('/', posts_1.getPosts);
 // get one post
 router.get('/:pid', posts_1.getPostById);
-// edit a post -- todo ==> can I just use a post or do I have to use patch??
+// edit a post
 router.patch('/:pid', posts_1.updatePost);
 // add a new post
 router.post('/', posts_1.createPost);

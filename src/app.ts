@@ -8,7 +8,7 @@ app.set('port', process.env.PORT || 5000);
 app.use(express.json());
 app.use(cors());
 
-// set up root route
+// set up root route for posts
 app.use('/api/v1/posts', postRoutes)
 
 // do some basic error handling

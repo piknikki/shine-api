@@ -9,7 +9,7 @@ router.get('/', getPosts)
 // get one post
 router.get('/:pid', getPostById)
 
-// edit a post -- todo ==> can I just use a post or do I have to use patch??
+// edit a post
 router.patch('/:pid', updatePost)
 
 // add a new post
