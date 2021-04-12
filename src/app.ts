@@ -11,6 +11,9 @@ app.use(cors());
 // set up root route for posts
 app.use('/api/v1/posts', postRoutes)
 
+// set up root route for users
+app.use('/api/v1/users', userRoutes)
+
 // do some basic error handling
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
     res.status(500).json({ message: err.message })
