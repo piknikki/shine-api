@@ -14,6 +14,14 @@ const users = [
     password: "urMyOnlyHope2021",
     postsLiked: [],
     postsSaved: []
+  },
+  {
+    uid: 42003,
+    name: "Marceline",
+    screenName: "VampQueen",
+    password: "Bonnibel42",
+    postsLiked: [],
+    postsSaved: []
   }
 
 ]
