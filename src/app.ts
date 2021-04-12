@@ -15,10 +15,11 @@ app.use('/api/v1/posts', postRoutes)
 // set up root route for users
 app.use('/api/v1/users', userRoutes)
 
-// do some basic error handling
-app.use((err: Error, req: Request, res: Response) => {
-    res.status(500).json({ message: err.message })
-})
+
+// todo ==> fix this it's throwing an error:  'TypeError: res.status is not a function'
+// app.use((err: Error, req: Request, res: Response) => {
+//     res.status(500).json({ message: err.message })
+// })
 
 // spin up the server and show confirmation message of port
 app.listen(app.get('port'), () => {
