@@ -8,6 +8,7 @@ router.get('/', users_1.getUsers);
 // get one user
 router.get('/:uid', users_1.getUserById);
 // edit user info
+router.patch('/:uid', users_1.updateUser);
 // add a new user
 // delete a user
 exports.default = router;

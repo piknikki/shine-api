@@ -15,3 +15,16 @@ export const getUserById: RequestHandler<{uid: number}> = (req, res, next) => {
     res.status(201).json({ message: 'Success!', user: foundUser })
 }
 
+export const updateUser: RequestHandler<{uid: number}> = (req, res, next) => {
+    const userId = req.params.uid
+    const updatedUser = (req.body as { name: string, screenName: string, postsLiked: Array<string>, postsSaved: Array<string> })
+    const userIndex = USERS.findIndex(user => user.uid === Number(userId))
+
+    if (userIndex < 0) {
+        throw new Error('Sorry, no user with that id is found.')
+    }
+
+    USERS[userIndex] = new User(USERS[userIndex].uid, updatedUser.name, updatedUser.screenName, updatedUser.postsLiked, updatedUser.postsSaved)
+    res.status(201).json({ message:  'User successfully updated', updatedUser: USERS[userIndex] })
+}
+

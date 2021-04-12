@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { getUsers, getUserById } from '../controllers/users';
+import { getUsers, getUserById, updateUser } from '../controllers/users';
 
 const router = Router()
 
@@ -10,6 +10,7 @@ router.get('/', getUsers)
 router.get('/:uid', getUserById)
 
 // edit user info
+router.patch('/:uid', updateUser)
 
 // add a new user
 
