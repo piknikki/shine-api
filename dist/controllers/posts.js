@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.deletePost = exports.createPost = exports.updatePost = exports.getPostById = exports.getPosts = void 0;
 const posts_1 = require("../models/posts");
-// const users = require('../data/users');
 const posts = require('../../data/posts');
 const POSTS = posts;
 const getPosts = (req, res, next) => {

@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { getUsers } from '../controllers/users';
+import { getUsers, getUserById } from '../controllers/users';
 
 const router = Router()
 
@@ -7,6 +7,7 @@ const router = Router()
 router.get('/', getUsers)
 
 // get one user
+router.get('/:uid', getUserById)
 
 // edit user info
 

@@ -6,6 +6,7 @@ const router = express_1.Router();
 // get all users
 router.get('/', users_1.getUsers);
 // get one user
+router.get('/:uid', users_1.getUserById);
 // edit user info
 // add a new user
 // delete a user

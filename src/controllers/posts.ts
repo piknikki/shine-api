@@ -1,6 +1,5 @@
 import { RequestHandler } from 'express';
 import { Post } from "../models/posts";
-// const users = require('../data/users');
 const posts = require('../../data/posts');
 
 const POSTS: Post[] = posts;
