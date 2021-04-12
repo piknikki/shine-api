@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { getUsers, getUserById, updateUser } from '../controllers/users';
+import { getUsers, getUserById, updateUser, createUser } from '../controllers/users';
 
 const router = Router()
 
@@ -13,6 +13,7 @@ router.get('/:uid', getUserById)
 router.patch('/:uid', updateUser)
 
 // add a new user
+router.post('/', createUser)
 
 // delete a user
 
