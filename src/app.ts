@@ -4,7 +4,7 @@ const cors = require('cors');
 import postRoutes from './routes/posts'
 import userRoutes from './routes/users'
 
-app.set('port', process.env.PORT || 5000);
+app.set('port', process.env.PORT ?? 5000);
 
 app.use(express.json());
 app.use(cors());
@@ -16,7 +16,7 @@ app.use('/api/v1/posts', postRoutes)
 app.use('/api/v1/users', userRoutes)
 
 // do some basic error handling
-app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
+app.use((err: Error, req: Request, res: Response) => {
     res.status(500).json({ message: err.message })
 })
 

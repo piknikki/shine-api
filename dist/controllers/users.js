@@ -4,17 +4,17 @@ exports.updateUser = exports.getUserById = exports.getUsers = void 0;
 const users_1 = require("../models/users");
 const users = require('../../data/users');
 const USERS = users;
-const getUsers = (req, res, next) => {
+const getUsers = (req, res) => {
     res.json({ users: USERS });
 };
 exports.getUsers = getUsers;
-const getUserById = (req, res, next) => {
+const getUserById = (req, res) => {
     const userId = req.params.uid;
     const foundUser = USERS.find(user => user.uid === Number(userId));
     res.status(201).json({ message: 'Success!', user: foundUser });
 };
 exports.getUserById = getUserById;
-const updateUser = (req, res, next) => {
+const updateUser = (req, res) => {
     const userId = req.params.uid;
     const updatedUser = req.body;
     const userIndex = USERS.findIndex(user => user.uid === Number(userId));
