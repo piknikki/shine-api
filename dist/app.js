@@ -18,5 +18,5 @@ app.use((err, req, res, next) => {
 });
 // spin up the server and show confirmation message of port
 app.listen(app.get('port'), () => {
-    console.log(`${app.locals.title} is running on http://localhost:${app.get('port')}.`);
+    console.log(`SHINE is running on http://localhost:${app.get('port')}.`);
 });
