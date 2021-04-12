@@ -1,15 +1,16 @@
 import { Router } from 'express';
+import { getPosts, createPost } from "../controllers/posts";
 
 const router = Router();
 
 // get all posts
-router.get('/api/v1/posts/')
+router.get('/', getPosts)
 
 // get one post
-router.get('/api/v1/posts/:pid')
+router.get('/:pid')
 
 // add a new post
-router.post('/api/v1/posts/')
+router.post('/', createPost)
 
 
 export default router;
