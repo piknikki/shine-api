@@ -1,7 +1,8 @@
 import express, { Application, Request, Response, NextFunction } from 'express';
 const app: Application = express();
 const cors = require('cors');
-import postRoutes from './routes/posts' // bring in the routes to use here and then remove them below
+import postRoutes from './routes/posts'
+import userRoutes from './routes/users'
 
 app.set('port', process.env.PORT || 5000);
 
