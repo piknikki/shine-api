@@ -12,5 +12,5 @@ router.patch('/:pid', posts_1.updatePost);
 // add a new post
 router.post('/', posts_1.createPost);
 // delete a post
-router.delete('/:id', posts_1.deletePost);
+router.delete('/:pid', posts_1.deletePost);
 exports.default = router;

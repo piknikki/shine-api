@@ -31,14 +31,12 @@ const createPost = (req, res, next) => {
     const postBody = req.body;
     const newPost = new posts_1.Post(Date.now(), postBody.uid, postBody.title, postBody.content);
     POSTS.push(newPost);
-    // this is what is returned as the response so that client can use it
     res.status(201).json({ message: 'Success! Post created.', createdPost: newPost });
 };
 exports.createPost = createPost;
 const deletePost = (req, res, next) => {
     const postId = req.params.pid;
-    // find the index of the post we're updating
-    const postIndex = POSTS.findIndex(post => post.pid === postId);
+    const postIndex = POSTS.findIndex(post => post.pid === Number(postId));
     if (postIndex < 0) {
         throw new Error('Could not find post.');
     }

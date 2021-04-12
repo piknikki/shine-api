@@ -36,15 +36,12 @@ export const createPost: RequestHandler = (req, res, next) => {
 
     POSTS.push(newPost)
 
-    // this is what is returned as the response so that client can use it
     res.status(201).json({ message: 'Success! Post created.', createdPost: newPost })
 }
 
 export const deletePost: RequestHandler<{pid: number}> = (req, res, next) => {
     const postId = req.params.pid
-
-    // find the index of the post we're updating
-    const postIndex = POSTS.findIndex(post => post.pid === postId)
+    const postIndex = POSTS.findIndex(post => post.pid === Number(postId))
 
     if (postIndex < 0) {
         throw new Error('Could not find post.')

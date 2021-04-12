@@ -16,6 +16,6 @@ router.patch('/:pid', updatePost)
 router.post('/', createPost)
 
 // delete a post
-router.delete('/:id', deletePost)
+router.delete('/:pid', deletePost)
 
 export default router;
