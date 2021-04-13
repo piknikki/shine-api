@@ -12,4 +12,5 @@ router.patch('/:uid', users_1.updateUser);
 // add a new user
 router.post('/', users_1.createUser);
 // delete a user
+router.delete('/:uid', users_1.deleteUser);
 exports.default = router;
