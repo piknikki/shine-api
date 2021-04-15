@@ -8,12 +8,14 @@ const posts = [
     content: "You are all bad asses. I believe in you. LMK how I can help you shine!",
     comments: [
       {
+        cid: 1001-1,
         uid: 42002,
         author: "Padmé Amidala",
         timestamp: 1618487224495,
         comment: "Just knowing you're here helps.",
       },
       {
+        cid: 1001-2,
         uid: 42003,
         author: "Marceline",
         timestamp: 1618487224495,
