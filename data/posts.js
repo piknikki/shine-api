@@ -6,7 +6,20 @@ const posts = [
     timestamp: 1618485896651,
     title: "I'm here 4 U",
     content: "You are all bad asses. I believe in you. LMK how I can help you shine!",
-    comments: []
+    comments: [
+      {
+        uid: 42002,
+        author: "Padmé Amidala",
+        timestamp: 1618487224495,
+        comment: "Just knowing you're here helps.",
+      },
+      {
+        uid: 42003,
+        author: "Marceline",
+        timestamp: 1618487224495,
+        comment: "Yeah, I want you to be proud. I want you to be proud of me!",
+      }
+    ]
   },
   {
     pid: 1002,
