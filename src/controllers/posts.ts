@@ -17,7 +17,7 @@ export const getPostById: RequestHandler<{pid: number}> = (req, res) => {
 
 export const updatePost: RequestHandler<{pid: number}> = (req, res) => {
     const postId = req.params.pid
-    const updatedPost = (req.body as {uid: number, timestamp: number, title: string, content: string })
+    const updatedPost = (req.body as {uid: number, timestamp: number, title: string, content: string, comments: Array<any> })
     const postIndex = POSTS.findIndex(post => post.pid === Number(postId))
 
     if (postIndex < 0) {
@@ -25,13 +25,13 @@ export const updatePost: RequestHandler<{pid: number}> = (req, res) => {
     }
 
     // todo ==> is there a way to pass these params in as an object?
-    POSTS[postIndex] = new Post(POSTS[postIndex].pid, updatedPost.uid, updatedPost.timestamp, updatedPost.title, updatedPost.content)
+    POSTS[postIndex] = new Post(POSTS[postIndex].pid, updatedPost.uid, updatedPost.timestamp, updatedPost.title, updatedPost.content, updatedPost.comments)
     res.status(201).json({ message: 'Success!',  updatedPost: POSTS[postIndex]})
 }
 
 export const createPost: RequestHandler = (req, res) => {
-    const postBody = (req.body as {uid: number, timestamp: number, title: string, content: string })
-    const newPost = new Post(Date.now(), postBody.uid, postBody.timestamp, postBody.title, postBody.content)
+    const postBody = (req.body as {uid: number, timestamp: number, title: string, content: string, comments: Array<any> })
+    const newPost = new Post(Date.now(), postBody.uid, postBody.timestamp, postBody.title, postBody.content, postBody.comments)
 
     POSTS.push(newPost)
 
