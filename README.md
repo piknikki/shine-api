@@ -9,7 +9,7 @@ CD into this repo.
 
 Run `npm install`.
 
-Run `npm start` to start the server.
+Run `npm run dev` to start the server.
 
 The project will run on your localhost *5000*
 
