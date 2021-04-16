@@ -12,14 +12,14 @@ const posts = [
         uid: 42002,
         author: "Padmé Amidala",
         timestamp: 1618487224495,
-        comment: "Just knowing you're here helps.",
+        body: "Just knowing you're here helps.",
       },
       {
         cid: 1001-2,
         uid: 42003,
         author: "Marceline",
         timestamp: 1618487224495,
-        comment: "Yeah, I want you to be proud. I want you to be proud of me!",
+        body: "Yeah, I want you to be proud. I want you to be proud of me!",
       }
     ]
   },
