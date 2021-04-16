@@ -5,7 +5,7 @@ export class Post {
                 public title: string,
                 public author: string,
                 public content: string,
-                public comments: Array<any>
+                public replies: Array<any>
                 ) {
     }
 }
